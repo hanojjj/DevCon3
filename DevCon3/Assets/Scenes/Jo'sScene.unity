@@ -344,9 +344,10 @@ MonoBehaviour:
   AngleAdjustSlider: {fileID: 1892578127}
   PowerAdjustSlider: {fileID: 1099123876}
   fireButton: 32
+  firePoint: {fileID: 143334588}
+  ThingTheCannonFires: {fileID: 6625293239416897563, guid: 05386963c6bab1b4b9d985541f4287f6, type: 3}
   BarrelAnchorPivot: {fileID: 893056904}
-  FirePoint: {fileID: 143334587}
-  maxCannonPower: 100
+  maxCannonPower: 15
   currentCannonPower: 0
 --- !u!1 &509568028
 GameObject:
@@ -930,7 +931,7 @@ GameObject:
   - component: {fileID: 1416629680}
   - component: {fileID: 1416629681}
   m_Layer: 0
-  m_Name: Graphic
+  m_Name: Cannon Graphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

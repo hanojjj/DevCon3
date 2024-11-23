@@ -20,8 +20,9 @@ public class CannonManager : MonoBehaviour
     [SerializeField] public KeyCode fireButton = KeyCode.Space;
 
     [Header("Manager Properties")]
+    [SerializeField] public Transform firePoint;
+    [SerializeField] public GameObject ThingTheCannonFires;
     [SerializeField] public GameObject BarrelAnchorPivot;
-    [SerializeField] public GameObject FirePoint;
     [SerializeField] public float maxCannonPower = 100;
     [SerializeField] public float currentCannonPower = 0;
     private FireState currentFireState;
@@ -81,6 +82,7 @@ public class CannonManager : MonoBehaviour
                     currentFireState = FireState.Fired;
 
                     //FIRE CANNON HERE!!!
+                    FireCannon();
 
                     break;
             }
@@ -105,12 +107,17 @@ public class CannonManager : MonoBehaviour
         }
     }
 
-    
+
+
+
 
 
 
 
     // Script Specific Functions!
+    /// <summary>
+    /// Function that grabs from Input
+    /// </summary>
     private void GatherInputs()
     {
         //fire button logic
@@ -120,6 +127,9 @@ public class CannonManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Moves miniGameCounter from 0 to 1
+    /// </summary>
     private void RunMinigameLogic()
     {
         //sets direction
@@ -151,9 +161,32 @@ public class CannonManager : MonoBehaviour
         }
     }
 
-    //i dont think i really need this function but whatever
+    /// <summary>
+    /// updates given slider to miniGameCounter value
+    /// </summary>
+    /// <param name="selectedSlider"></param>
     private void UpdateSliderToMinigameValue(Slider selectedSlider)
     {
         selectedSlider.value = miniGameCounter;
+    }
+
+    /// <summary>
+    /// Instantiates our projectile, Adds a force based on cannon direction, and given power
+    /// </summary>
+    private void FireCannon()
+    {
+        // Creates Projectile
+        Rigidbody2D cannonShot = Instantiate(ThingTheCannonFires).GetComponent<Rigidbody2D>();
+        //sets transform values of our shot
+        cannonShot.transform.position = firePoint.transform.position;
+        cannonShot.transform.rotation = BarrelAnchorPivot.transform.rotation;
+
+        //readable refrence to cannon angle
+        float cannonAngle = BarrelAnchorPivot.transform.rotation.z;
+        //Calculates force to be added to projectile
+        //Sin and Cos return values from 0-1 based on the radian inputted. These X and Y values are multiplied by our cannon power, giving us a vector2 force
+        Vector2 shotDirection = new Vector2(-Mathf.Sin(cannonAngle) * currentCannonPower, Mathf.Cos(cannonAngle) * currentCannonPower);
+        //then we add force
+        cannonShot.AddForce(shotDirection, ForceMode2D.Impulse);
     }
 }
