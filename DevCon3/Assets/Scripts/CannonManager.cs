@@ -28,6 +28,8 @@ public class CannonManager : MonoBehaviour
     private FireState currentFireState;
     private bool weShouldDoFiringLogic = false;
 
+    public bool hasFired = false;
+
     private enum FireState
     {
         WaitingForInput,
@@ -188,5 +190,8 @@ public class CannonManager : MonoBehaviour
         Vector2 shotDirection = new Vector2(-Mathf.Sin(cannonAngle) * currentCannonPower, Mathf.Cos(cannonAngle) * currentCannonPower);
         //then we add force
         cannonShot.AddForce(shotDirection, ForceMode2D.Impulse);
+
+        hasFired = true;
     }
+
 }
