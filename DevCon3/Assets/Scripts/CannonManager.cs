@@ -25,10 +25,13 @@ public class CannonManager : MonoBehaviour
     [SerializeField] public GameObject BarrelAnchorPivot;
     [SerializeField] public float maxCannonPower = 100;
     [SerializeField] public float currentCannonPower = 0;
+    public GameObject cannonShot;
     private FireState currentFireState;
     private bool weShouldDoFiringLogic = false;
 
     public bool hasFired = false;
+
+    public DistanceToEnd disToEnd;
 
     private enum FireState
     {
@@ -177,11 +180,18 @@ public class CannonManager : MonoBehaviour
     /// </summary>
     private void FireCannon()
     {
+      
+
         // Creates Projectile
-        Rigidbody2D cannonShot = Instantiate(ThingTheCannonFires).GetComponent<Rigidbody2D>();
+        cannonShot = Instantiate(ThingTheCannonFires);
+        Rigidbody2D cannonRb = cannonShot.GetComponent<Rigidbody2D>();
+        disToEnd.bullet = cannonShot;
+        
         //sets transform values of our shot
         cannonShot.transform.position = firePoint.transform.position;
         cannonShot.transform.rotation = BarrelAnchorPivot.transform.rotation;
+
+
 
         //readable refrence to cannon angle
         float cannonAngle = BarrelAnchorPivot.transform.rotation.z;
@@ -189,7 +199,7 @@ public class CannonManager : MonoBehaviour
         //Sin and Cos return values from 0-1 based on the radian inputted. These X and Y values are multiplied by our cannon power, giving us a vector2 force
         Vector2 shotDirection = new Vector2(-Mathf.Sin(cannonAngle) * currentCannonPower, Mathf.Cos(cannonAngle) * currentCannonPower);
         //then we add force
-        cannonShot.AddForce(shotDirection, ForceMode2D.Impulse);
+        cannonRb.AddForce(shotDirection, ForceMode2D.Impulse);
 
         hasFired = true;
     }
