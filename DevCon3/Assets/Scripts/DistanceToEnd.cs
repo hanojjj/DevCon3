@@ -17,7 +17,7 @@ public class DistanceToEnd : MonoBehaviour
 
     void Update()
     {
-
+        //if theres no bullet it won't check for the distance
         if (bullet !=  null)
         {
             distance = (checkpoint.transform.position.x - bullet.transform.position.x);
