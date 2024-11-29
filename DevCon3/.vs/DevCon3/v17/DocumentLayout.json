@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\josep\\Documents\\GitHub\\DevCon3\\DevCon3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C6F7248F-E54A-01C0-C5A3-424613DB9FD7}|Assembly-CSharp.csproj|c:\\users\\josep\\documents\\github\\devcon3\\devcon3\\assets\\scripts\\cannonmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6F7248F-E54A-01C0-C5A3-424613DB9FD7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cannonmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\josep\\Documents\\GitHub\\Team6\\unity-project\\mini-game-collection\\Assets\\Scripts\\MiniGameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MiniGameManager.cs",
+              "DocumentMoniker": "C:\\Users\\josep\\Documents\\GitHub\\Team6\\unity-project\\mini-game-collection\\Assets\\Scripts\\MiniGameManager.cs",
+              "RelativeDocumentMoniker": "..\\..\\Team6\\unity-project\\mini-game-collection\\Assets\\Scripts\\MiniGameManager.cs",
+              "ToolTip": "C:\\Users\\josep\\Documents\\GitHub\\Team6\\unity-project\\mini-game-collection\\Assets\\Scripts\\MiniGameManager.cs",
+              "RelativeToolTip": "..\\..\\Team6\\unity-project\\mini-game-collection\\Assets\\Scripts\\MiniGameManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T20:22:33.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CannonManager.cs",
+              "DocumentMoniker": "C:\\Users\\josep\\Documents\\GitHub\\DevCon3\\DevCon3\\Assets\\Scripts\\CannonManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CannonManager.cs",
+              "ToolTip": "C:\\Users\\josep\\Documents\\GitHub\\DevCon3\\DevCon3\\Assets\\Scripts\\CannonManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CannonManager.cs",
+              "ViewState": "AQIAAJ4AAAAAAAAAAAAkwL8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T16:19:42.033Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
