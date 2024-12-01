@@ -6,7 +6,7 @@ public class PlatformSpawner : MonoBehaviour
 {
     //randomly spawns a platform to boost the player- will spawn 50 meters in front of player at random heights -cc
     public DistanceToEnd distanceTracker;
-    public GameObject bounceCollect;
+    public GameObject platformObj;
 
     public float minX, maxX;
     public float minY, maxY;
@@ -21,7 +21,7 @@ public class PlatformSpawner : MonoBehaviour
         maxX = minX + 100;
         if (currentDis >= minX){
             minX += 50;
-            Instantiate(bounceCollect, new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0), bounceCollect.transform.rotation);
+            Instantiate(platformObj, new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0), platformObj.transform.rotation);
         }
     }
 }
