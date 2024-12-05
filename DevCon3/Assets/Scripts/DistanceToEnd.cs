@@ -22,7 +22,7 @@ public class DistanceToEnd : MonoBehaviour
         {
             distance = (checkpoint.transform.position.x - bullet.transform.position.x);
 
-            distanceText.text = "Distance: " + distance.ToString("F1") + " meters";
+            distanceText.text = "Distance-" + distance.ToString("F1") + " meters";
         }
 
     }
