@@ -18,7 +18,7 @@ public class CameraFollow : MonoBehaviour
         if (cannonManager.hasFired == true)
         {
             bullet = GameObject.FindWithTag("Bullet").transform;
-            transform.position = new Vector3(bullet.position.x, bullet.position.y, transform.position.z);
+            transform.position = new Vector3(bullet.position.x, bullet.position.y + 3, transform.position.z);
         }
         else { Debug.Log("FIRE, YOU JERK.");
         }
